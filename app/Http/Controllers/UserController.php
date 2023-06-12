@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -28,6 +29,7 @@ class UserController extends Controller
             'phone' => 'required|unique:users,phone',
             'address' => 'required',
             'password' => 'required|min:8',
+            'confirm_password' => 'required_with:password|same:password|min:8',
             'image' => 'mimes:jpg,png,jpeg',
             'account_type' => 'required'
         ]);
@@ -58,4 +60,24 @@ class UserController extends Controller
         return redirect()->intended('dashboard')->with('Account created successfully');
         // DB::rollBack();
     }
+
+    public function login(Request $request)
+    {
+        $loginUser = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt($request->only(['email', 'password']))) {
+            return redirect()->intended('dashboard');
+        }
+
+        return redirect()->back();
+    }
+
+    public function dashboard()
+    {
+        return "dashboard";
+    }
 }
+

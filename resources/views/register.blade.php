@@ -22,8 +22,8 @@
         <label class="login-label" for="password">Password:</label><br>
         <input name="password" class="login-input" id="password" type="password" required><br>
 
-        {{-- <label class="login-label" for="confirm_password">Confirm Password:</label><br>
-        <input name="confirm_password" class="login-input" id="confirm_password" type="password" required><br> --}}
+        <label class="login-label" for="confirm_password">Confirm Password:</label><br>
+        <input name="confirm_password" class="login-input" id="confirm_password" type="password" required><br>
 
         <label class="login-label" for="image">Image:</label><br>
         <input name="image" class="login-input" id="image" type="file"><br>
