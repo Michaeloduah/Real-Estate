@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -18,6 +19,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Auth::routes([
+    'verify' => true
+]);
+
 Route::middleware(['guest'])->group( function () {
     Route::get('login', [UserController::class, 'loginPage'])->name('login');
     Route::post('login', [UserController::class, 'login'])->name('loginUser');
@@ -26,7 +31,7 @@ Route::middleware(['guest'])->group( function () {
     Route::post('register', [UserController::class, 'register'])->name('registerUser');
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth', 'verified')->group(function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {
         Route::get('', [UserController::class, 'dashboard'])->name('dashboard');
     });
