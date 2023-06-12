@@ -25,3 +25,9 @@ Route::middleware(['guest'])->group( function () {
     Route::get('register', [UserController::class, 'registerPage'])->name('register');
     Route::post('register', [UserController::class, 'register'])->name('registerUser');
 });
+
+Route::middleware('auth')->group(function () {
+    Route::name('dashboard.')->prefix('dashboard')->group(function () {
+        Route::get('', [UserController::class, 'dashboard'])->name('dashboard');
+    });
+});

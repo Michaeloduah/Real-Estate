@@ -1,11 +1,11 @@
 @extends('layouts.homepage')
 
 @section('content')
-    <form class="login-form" method="POST" action="" enctype="multipart/form-data">
+    <form class="login-form" method="POST" action="{{ route('registerUser') }}" enctype="multipart/form-data">
         @csrf
         
-        <label class="login-label" for="full_name">Full Name:</label><br>
-        <input name="full_name" class="login-input" id="full_name" type="text" required><br>
+        <label class="login-label" for="fullname">Full Name:</label><br>
+        <input name="fullname" class="login-input" id="fullname" type="text" required><br>
 
         <label class="login-label" for="username">Username:</label><br>
         <input name="username" class="login-input" id="username" type="text" required><br>
@@ -22,11 +22,11 @@
         <label class="login-label" for="password">Password:</label><br>
         <input name="password" class="login-input" id="password" type="password" required><br>
 
-        <label class="login-label" for="confirm_password">Confirm Password:</label><br>
-        <input name="confirm_password" class="login-input" id="confirm_password" type="password" required><br>
+        {{-- <label class="login-label" for="confirm_password">Confirm Password:</label><br>
+        <input name="confirm_password" class="login-input" id="confirm_password" type="password" required><br> --}}
 
         <label class="login-label" for="image">Image:</label><br>
-        <input name="image" class="login-input" id="image" type="file" required><br>
+        <input name="image" class="login-input" id="image" type="file"><br>
 
         <label class="login-label" for="account_type">Account Type:</label><br>
         <select name="account_type" class="login-input" id="account_type" required>

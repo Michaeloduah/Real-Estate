@@ -156,12 +156,12 @@
           </button>
 
           <button class="header-bottom-actions-btn" aria-label="Register">
-            <a href="#"><ion-icon name="person-add-outline"></ion-icon></a>
+            <a href="{{ route('register') }}"><ion-icon name="person-add-outline"></ion-icon></a>
             <span>Register</span>
           </button>
 
           <button class="header-bottom-actions-btn" aria-label="Login">
-              <a href="#"><ion-icon name="log-in"></ion-icon></a>
+              <a href="{{ route('login') }}"><ion-icon name="log-in"></ion-icon></a>
               
             <span>Login</span>
           </button>
@@ -373,7 +373,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
+          &copy; 2023 <a href="#">Homeverse</a>. All Rights Reserved
         </p>
 
       </div>
