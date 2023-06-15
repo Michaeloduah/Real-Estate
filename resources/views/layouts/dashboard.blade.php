@@ -17,8 +17,8 @@
 	<!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="#" class="brand">
-			<img id="logo1" class="" src="{{asset('assets/images/logo.png')}}" alt="Homeverse logo">
-			<img id="logo2" class="logo-dark" src="{{asset('assets/images/logo-light.png')}}" alt="Homeverse logo">
+			<img id="logo1" width="100%" class="" src="{{asset('assets/images/logo.png')}}" alt="Homeverse logo">
+			<img id="logo2" width="100%" class="logo-dark" src="{{asset('assets/images/logo-light.png')}}" alt="Homeverse logo">
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -83,8 +83,8 @@
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
+			{{-- <input type="checkbox" id="switch-mode">
+			<label for="switch-mode" class="switch-mode"></label> --}}
 			<a href="#" class="notification">
 				<i class='bx bxs-bell' ></i>
 				<span class="num">8</span>
