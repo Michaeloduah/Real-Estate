@@ -98,7 +98,7 @@
     <div class="header-bottom">
       <div class="container">
 
-        <a href="#" class="logo">
+        <a href="/" class="logo">
           <img src="{{asset('assets/images/logo.png')}}" alt="Homeverse logo">
         </a>
 
@@ -106,7 +106,7 @@
 
           <div class="navbar-top">
 
-            <a href="#" class="logo">
+            <a href="/" class="logo">
               <img src="{{asset('assets/images/logo.png')}}" alt="Homeverse logo">
             </a>
 
@@ -200,7 +200,7 @@
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">
+          <a href="/" class="logo">
             <img src="{{asset('assets/images/logo-light.png')}}" alt="Homeverse logo">
           </a>
 
