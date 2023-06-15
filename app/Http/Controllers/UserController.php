@@ -75,9 +75,6 @@ class UserController extends Controller
         return redirect()->back();
     }
 
-    public function dashboard()
-    {
-        return "dashboard";
-    }
+    
 }
 

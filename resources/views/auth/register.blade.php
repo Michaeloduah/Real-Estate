@@ -36,5 +36,7 @@
         </select>
 
         <button class="header-top-btn" type="submit">Register</button>
+        
+        <p>Already have an account <a class="section-subtitle" style="display: inline" href="{{ route('login') }}">Login</a></p>
     </form>
 @endsection

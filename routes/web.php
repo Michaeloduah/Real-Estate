@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,20 +23,9 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-
-
-// Route::middleware(['guest'])->group( function () {
-//     Route::get('login', [UserController::class, 'loginPage'])->name('login');
-//     Route::post('login', [UserController::class, 'login'])->name('loginUser');
-
-//     Route::get('register', [UserController::class, 'registerPage'])->name('register');
-//     Route::post('register', [UserController::class, 'register'])->name('registerUser');
-    
-// });
-
 Route::middleware('auth', 'verified')->group(function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {
-        Route::get('', [UserController::class, 'dashboard'])->name('dashboard');
+        Route::get('', [DashboardController::class, 'index'])->name('index');
     });
 });
 
