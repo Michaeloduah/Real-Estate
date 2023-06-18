@@ -60,10 +60,17 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="logout">
-					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Logout</span>
-				</a>
+				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
+					@csrf
+				
+					<button class="text" type="submit" style="border: 0px">
+						<a href="" class="logout">
+							<i class='bx bxs-log-out-circle' ></i>
+							<span class="text">Logout</span>
+						</a>
+					</button>
+					{{-- <i class='bx bxs-log-out-circle' ></i><span class="text"> Click me</span> --}}
+				</form>
 			</li>
 		</ul>
 	</section>

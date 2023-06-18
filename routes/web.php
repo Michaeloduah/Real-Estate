@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -27,6 +28,12 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {
         Route::get('', [DashboardController::class, 'index'])->name('index');
     });
+
+
+    // Route::get('logout', function (Request $request) {
+    //     $request->session()->flush();
+    //     return redirect()->route('login');
+    // })->name('log-out');
 });
 
 
