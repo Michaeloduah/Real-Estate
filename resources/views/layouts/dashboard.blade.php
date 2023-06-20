@@ -63,13 +63,12 @@
 				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
 					@csrf
 				
-					<button class="text" type="submit" style="border: 0px">
-						<a href="" class="logout">
+					<button class="logout-btn" type="submit">
+						<a href="" class="logout" style="padding: 10px 0px 10px 0px">
 							<i class='bx bxs-log-out-circle' ></i>
-							<span class="text">Logout</span>
+							<span class="">Logout</span>
 						</a>
 					</button>
-					{{-- <i class='bx bxs-log-out-circle' ></i><span class="text"> Click me</span> --}}
 				</form>
 			</li>
 		</ul>
@@ -90,12 +89,12 @@
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
-			{{-- <input type="checkbox" id="switch-mode">
-			<label for="switch-mode" class="switch-mode"></label> --}}
-			<a href="#" class="notification">
+			<input type="checkbox" id="switch-mode">
+			<label for="switch-mode" class="switch-mode"></label>
+			{{-- <a href="#" class="notification">
 				<i class='bx bxs-bell' ></i>
 				<span class="num">8</span>
-			</a>
+			</a> --}}
 			<a href="#" class="profile">
 				<img src="{{asset('assets/images/author.jpg')}}">
 			</a>
