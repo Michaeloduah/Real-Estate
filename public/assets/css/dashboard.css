@@ -527,7 +527,92 @@ body {
 
 
 
+/* Dashboard Settings */
+.container {
+	margin: 5%;
+}
 
+.login-label {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 500;
+	color: var(--dark);
+}
+  
+  .login-input {
+	width: 50%;
+	margin: 10px auto;
+	padding: 10px;
+	border-radius: 10px;
+	border: 0px;
+	background: transparent;
+	font-size: 15px;
+	color: var(--dark);
+}
+
+.profile-card {
+	margin-top: 2%;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 2%;
+}
+
+.info1 {
+	background-color: var(--light);
+	text-align: center;
+	border-radius: 35px;
+	padding: 10%;
+	box-shadow: 5px 5px 5px 5px var(--grey);
+}
+
+.info2 {
+	background-color: var(--light);
+	text-align: left;
+	border-radius: 35px;
+	padding: 5%;
+	box-shadow: 5px 5px 5px 5px var(--grey);
+}
+
+.info1 .images {
+	border-radius: 50%;
+	width: 40%;
+}
+
+.info1 h2 {
+	font-weight: 600;
+	color: var(--dark);
+}
+
+.info1 p {
+	margin-bottom: 3%;
+	color: var(--dark);
+}
+
+.info1 h4 {
+	text-align: left;
+	color: var(--dark);
+	margin-top: 3%;
+}
+
+.info1 .description {
+	text-align: left;
+	color: var(--dark);
+}
+
+.btn-edit {
+	height: 36px;
+	width: fit-content;
+	padding: 0 16px;
+	border-radius: 36px;
+	background: var(--blue);
+	color: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	font-weight: 500;
+	margin-top: 2%;
+}
 
 
 
@@ -545,6 +630,12 @@ body {
 
 	#content nav .nav-link {
 		display: none;
+	}
+
+	.profile-card {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2%;
 	}
 
 	
@@ -608,3 +699,4 @@ body {
 	width: 100%;
 	
 }
+

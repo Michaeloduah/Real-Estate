@@ -17,13 +17,13 @@
 
 			<!-- SIDEBAR -->
 			<section id="sidebar">
-				<a href="#" class="brand">
+				<a href="{{ route('dashboard.index') }}" class="brand">
 					<img id="logo1" width="100%" class="" src="{{asset('assets/images/logo.png')}}" alt="Homeverse logo">
 					<img id="logo2" width="100%" class="logo-dark" src="{{asset('assets/images/logo-light.png')}}" alt="Homeverse logo">
 				</a>
 				<ul class="side-menu top">
 					<li class="active">
-						<a href="#">
+						<a href="{{ route('dashboard.index') }}">
 							<i class='bx bxs-dashboard' ></i>
 							<span class="text">Dashboard</span>
 						</a>
@@ -31,13 +31,13 @@
 					<li>
 						<a href="#">
 							<i class='bx bxs-home' ></i>
-							<span class="text">House For Sale</span>
+							<span class="text">House or Property For Sale</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<i class='bx bxs-building-house' ></i>
-							<span class="text">House For Rent</span>
+							<span class="text">House or Property For Rent</span>
 						</a>
 					</li>
 					<li>
@@ -55,9 +55,9 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
-							<i class='bx bxs-cog' ></i>
-							<span class="text">Settings</span>
+						<a href="{{ route('dashboard.profile') }}">
+							<i class='bx bxs-user-circle' ></i>
+							<span class="text">Profile</span>
 						</a>
 					</li>
 					<li>
@@ -136,13 +136,13 @@
 
 		<!-- SIDEBAR -->
 		<section id="sidebar">
-			<a href="#" class="brand">
+			<a href="{{ route('dashboard.index') }}" class="brand">
 				<img id="logo1" width="100%" class="" src="{{asset('assets/images/logo.png')}}" alt="Homeverse logo">
 				<img id="logo2" width="100%" class="logo-dark" src="{{asset('assets/images/logo-light.png')}}" alt="Homeverse logo">
 			</a>
 			<ul class="side-menu top">
 				<li class="active">
-					<a href="#">
+					<a href="{{ route('dashboard.index') }}">
 						<i class='bx bxs-dashboard' ></i>
 						<span class="text">Dashboard</span>
 					</a>
@@ -174,9 +174,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<i class='bx bxs-cog' ></i>
-						<span class="text">Settings</span>
+					<a href="{{ route('dashboard.profile') }}">
+						<i class='bx bxs-user-circle' ></i>
+						<span class="text">Profile</span>
 					</a>
 				</li>
 				<li>
@@ -256,13 +256,13 @@
 
 		<!-- SIDEBAR -->
 		<section id="sidebar">
-			<a href="#" class="brand">
+			<a href="{{ route('dashboard.index') }}" class="brand">
 				<img id="logo1" width="100%" class="" src="{{asset('assets/images/logo.png')}}" alt="Homeverse logo">
 				<img id="logo2" width="100%" class="logo-dark" src="{{asset('assets/images/logo-light.png')}}" alt="Homeverse logo">
 			</a>
 			<ul class="side-menu top">
 				<li class="active">
-					<a href="#">
+					<a href="{{ route('dashboard.index') }}">
 						<i class='bx bxs-dashboard' ></i>
 						<span class="text">Dashboard</span>
 					</a>
@@ -294,9 +294,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
-						<i class='bx bxs-cog' ></i>
-						<span class="text">Settings</span>
+					<a href="{{ route('dashboard.profile') }}">
+						<i class='bx bxs-user-circle' ></i>
+						<span class="text">Profile</span>
 					</a>
 				</li>
 				<li>
@@ -343,9 +343,9 @@
 			<!-- NAVBAR -->
 
 			<!-- MAIN -->
+			
 
-
-			@yield('content')
+				@yield('content')
 
 
 			<!-- MAIN -->
