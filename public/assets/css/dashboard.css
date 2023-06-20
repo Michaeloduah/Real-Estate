@@ -408,7 +408,9 @@ body {
 	color: var(--dark);	
 }
 
-
+.username {
+	color: var(--dark);	
+}
 
 
 

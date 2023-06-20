@@ -29,30 +29,30 @@
 			</li>
 			<li>
 				<a href="#">
-					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">My Store</span>
+					<i class='bx bxs-home' ></i>
+					<span class="text">House For Sale</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
-					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">Analytics</span>
+					<i class='bx bxs-building-house' ></i>
+					<span class="text">House For Rent</span>
 				</a>
 			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-cart-add' ></i>
+					<span class="text">Saved Items</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
 			<li>
 				<a href="#">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">Message</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-group' ></i>
-					<span class="text">Team</span>
-				</a>
-			</li>
-		</ul>
-		<ul class="side-menu">
 			<li>
 				<a href="#">
 					<i class='bx bxs-cog' ></i>
@@ -91,12 +91,13 @@
 			</form>
 			<input type="checkbox" id="switch-mode">
 			<label for="switch-mode" class="switch-mode"></label>
-			{{-- <a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a> --}}
+			<p class="username"> {{ auth()->user()->username}} </p>
 			<a href="#" class="profile">
-				<img src="{{asset('assets/images/author.jpg')}}">
+				@if (auth()->user()->image == NULL)
+					<img src="{{ asset('assets/images/no-profile.png') }}" alt="">
+				@else
+					<img src="{{auth()->user()->image}}">
+				@endif
 			</a>
 		</nav>
 		<!-- NAVBAR -->

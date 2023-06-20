@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('image')->nullable();
             $table->string('saved_items')->nullable();
-            $table->string('cart')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
