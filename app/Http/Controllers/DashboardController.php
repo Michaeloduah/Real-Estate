@@ -41,4 +41,6 @@ class DashboardController extends Controller
         }
         return redirect()->intended('dashboard')->with('dashboard')->withInput($request->input())->with('message', 'Profile Updated');
     }
+
+    
 }
