@@ -1,15 +1,6 @@
 @extends('layouts.homepage')
 
 @section('content')
-    {{-- @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif --}}
     <form class="login-form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
         

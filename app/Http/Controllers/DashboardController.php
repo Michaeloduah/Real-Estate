@@ -19,7 +19,12 @@ class DashboardController extends Controller
         return view('dashboard.setting');
     }
 
-    public function edit(Request $request, $id) {
+    public function editprofile() {
+        $user = User::findOrFail(auth()->user()->id);
+        return view('dashboard.editprofile', ['user' => $user]);
+    }
+
+    public function updateprofile(Request $request, $id) {
         $user = User::findOrFail($id);
         $valid = $request->validate([
             'fullname' => 'required',

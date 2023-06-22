@@ -29,7 +29,7 @@
                 <p>{{auth()->user()->account_type}} Account</p>
                 <hr>
             
-                <a class="btn-edit" href="">Edit Profile</a>
+                <a class="btn-edit" href="{{ route('dashboard.editprofile') }}">Edit Profile</a>
             
             </div>
 
@@ -49,37 +49,9 @@
                 <label class="login-label" for="address">Address:</label>
                 <input class="login-input" type="text" value="{{auth()->user()->address}}" readonly><br>
                 
-                <a class="btn-edit" href="">Edit Profile</a>    
+                <a class="btn-edit" href="{{ route('dashboard.editprofile') }}">Edit Profile</a>    
             </div>
 
         </div>
-        {{-- <div>
-            @if (auth()->user()->image == NULL)
-                <img width="10%" src="{{ asset('assets/images/no-profile.png') }}" alt="">
-            @else
-                <img width="10%" src="{{auth()->user()->image}}">
-            @endif
-            <br>
-            <div>
-                <label class="login-label" for="fullname">Fullname:</label>
-                <input class="login-input" type="text" value="{{auth()->user()->fullname}}" readonly>
-            </div>
-
-            <div>
-                <label class="login-label" for="username">Username:</label>
-                <input class="login-input" type="text" value="{{auth()->user()->username}}" readonly>
-            </div>
-
-            <div>
-                <label class="login-label" for="phone">Phone Number:</label>
-                <input class="login-input" type="text" value="{{auth()->user()->phone}}" readonly>
-            </div>
-
-            <div>
-                <label class="login-label" for="email">Email:</label>
-                <input class="login-input" type="email" value="{{auth()->user()->email}}" readonly>
-            </div>
-
-        </div> --}}
     </main>
 @endsection

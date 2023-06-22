@@ -549,6 +549,38 @@ body {
 	font-size: 15px;
 	color: var(--dark);
 }
+  
+  .login-input1 {
+	width: 50%;
+	margin: 10px auto;
+	padding: 10px;
+	border-radius: 10px;
+	background: transparent;
+	font-size: 15px;
+	color: var(--dark);
+}
+
+.login-input1[type="file"] {
+	max-width: 100%;
+	color: #444;
+	padding: 10px;
+	background: transparent;
+	border-radius: 10px;
+	border: 2px ;
+	cursor: pointer;
+}
+
+.section-subtitle {
+	color: var(--orange-soda);
+	font-size: var(--fs-5);
+	font-weight: var(--fw-600);
+	padding: 5px 20px;
+	background: hsla(9, 100%, 62%, 0.1);
+	width: max-content;
+	border-radius: 50px;
+	margin-inline: auto;
+	margin-bottom: 15px;
+  }
 
 .profile-card {
 	margin-top: 2%;
@@ -603,8 +635,9 @@ body {
 .btn-edit {
 	height: 36px;
 	width: fit-content;
-	padding: 0 16px;
+	padding: 10px 16px;
 	border-radius: 36px;
+	border: 0px;
 	background: var(--blue);
 	color: var(--light);
 	display: flex;

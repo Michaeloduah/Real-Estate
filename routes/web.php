@@ -28,7 +28,8 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::name('dashboard.')->prefix('dashboard')->group(function () {
         Route::get('', [DashboardController::class, 'index'])->name('index');
         Route::get('profile', [DashboardController::class, 'profile'])->name('profile');
-        Route::get('editprofile/{id}', [DashboardController::class, 'editprofile'])->name('editprofile');
+        Route::get('editprofile', [DashboardController::class, 'editprofile'])->name('editprofile');
+        Route::post('updateprofile/{id}', [DashboardController::class, 'updateprofile'])->name('updateprofile');
     });
 
 });
