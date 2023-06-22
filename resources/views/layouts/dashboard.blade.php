@@ -97,7 +97,7 @@
 						@if (auth()->user()->image == NULL)
 							<img src="{{ asset('assets/images/no-profile.png') }}" alt="">
 						@else
-							<img src="{{auth()->user()->image}}">
+							<img src="{{asset('storage/'.auth()->user()->image)}}">
 						@endif
 					</a>
 				</nav>

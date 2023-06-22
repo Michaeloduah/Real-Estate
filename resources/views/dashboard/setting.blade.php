@@ -20,9 +20,9 @@
         <div class="profile-card">
             <div class="info1">
                 @if (auth()->user()->image == NULL)
-                    <img class="images" src="{{ asset('assets/images/no-profile.png') }}" alt="">
+                    <img width="100%" src="{{ asset('assets/images/no-profile.png') }}" alt="">
                 @else
-                    <img class="images" src="{{auth()->user()->image}}">
+                    <img width="100%" src="{{asset('storage/'.auth()->user()->image)}}">
                 @endif
 
                 <h2>{{auth()->user()->fullname}}</h2>

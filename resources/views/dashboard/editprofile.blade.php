@@ -77,7 +77,7 @@
             @endif
     
             {{-- <label class="login-label" for="account_type">Account Type:</label><br> --}}
-            <select name="account_type" class="login-input1" id="account_type" value="{{ $user->account_type }}" hidden>
+            <select name="account_type" class="login-input1" id="account_type" value="{{ $user->account_type }}">
                 <option value="">Select Your Account Type</option>
                 <option value="Client">Client Account</option>
                 <option value="Agent">Agent Account</option>
