@@ -40,7 +40,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'password' => 'hashed',
     ];
 
-    public function payments() {
+    public function property() {
         return $this->hasMany(Payment::class);
     }
 }
